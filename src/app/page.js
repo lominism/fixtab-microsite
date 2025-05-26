@@ -1,7 +1,9 @@
 "use client";
 
+import { useLanguage } from "./LanguageContext";
 import { useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
 
 const labels = {
   en: {
@@ -42,33 +44,12 @@ export default function Home() {
     issueType: "",
     detail: "",
   });
-  const [lang, setLang] = useState("th");
+  const { lang } = useLanguage();
 
   const t = labels[lang];
 
   return (
     <div className="bg-white min-h-screen font-sans text-gray-900">
-      {/* Header */}
-      <header className="bg-black text-white px-4 py-3 flex items-center justify-between">
-        <div className="flex items-center space-x-2">
-          <Image
-            src="/fixtab-logo.svg"
-            alt="Fixtab logo"
-            width={24}
-            height={24}
-          />
-          <span className="font-bold text-lg">Fixtab</span>
-        </div>
-        <button
-          type="button"
-          aria-label="Toggle language"
-          className="h-6 w-6 flex items-center justify-center"
-          onClick={() => setLang(lang === "en" ? "th" : "en")}
-        >
-          🌐
-        </button>
-      </header>
-
       <main className="p-4 max-w-sm mx-auto">
         {/* Product Card */}
         <div className="bg-white shadow rounded-lg overflow-hidden mb-6">
@@ -214,6 +195,27 @@ export default function Home() {
           </button>
         </form>
       </main>
+      {/* Navigation Buttons */}
+      <div className="py-8">
+        <p className="text-sm text-center">
+          Temporary nav buttons to see other pages I made
+        </p>
+        <div className="flex gap-2 mt-4">
+          <Link
+            href="/success"
+            className="w-full text-center px-4 py-2 rounded-lg border border-gray-300 bg-gray-100 text-gray-700 hover:bg-gray-200 transition font-medium"
+          >
+            Success Page
+          </Link>
+          <Link
+            href="/complete"
+            className="w-full text-center px-4 py-2 rounded-lg border border-gray-300 bg-gray-100 text-gray-700 hover:bg-gray-200 transition font-medium"
+          >
+            Complete Page
+          </Link>
+        </div>
+      </div>
+      {/* End of natigation buttons */}
     </div>
   );
 }
