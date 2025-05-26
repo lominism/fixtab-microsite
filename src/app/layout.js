@@ -22,7 +22,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`bg-white ${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <LanguageContext.Provider value={{ lang, setLang }}>
           <header className="bg-black px-4 py-3 flex items-center justify-between">
