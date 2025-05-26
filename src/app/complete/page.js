@@ -1,6 +1,6 @@
 "use client";
 
-import { useLanguage } from "@/app/LanguageContext";
+import { useLanguage } from "../LanguageContext";
 import { useState } from "react";
 import Image from "next/image";
 

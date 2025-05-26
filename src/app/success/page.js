@@ -1,6 +1,6 @@
 "use client";
 
-import { useLanguage } from "@/app/LanguageContext";
+import { useLanguage } from "../LanguageContext";
 import Image from "next/image";
 import { FaRegCopy } from "react-icons/fa";
 
