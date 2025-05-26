@@ -54,7 +54,7 @@ export default function RootLayout({ children }) {
             </button>
           </header>
           {children}
-          <footer>
+          <footer className="bg-white">
             <div className="mt-12 text-xs text-gray-400 text-center pb-4">
               Powered by Fixtab
             </div>
