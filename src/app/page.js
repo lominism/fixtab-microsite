@@ -221,7 +221,7 @@ export default function Home() {
           </Link>
         </div>
       </div>
-      {/* End of natigation buttons */}
+      {/* End of navigation buttons */}
     </div>
   );
 }

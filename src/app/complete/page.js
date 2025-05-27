@@ -135,7 +135,7 @@ export default function ConfirmCompletion() {
           </div>
 
           {rating > 0 && (
-            <p className="text-sm font-medium mb-4">
+            <p className="text-gray-900 text-sm font-medium mb-4">
               {ratingLabels[rating - 1]}
             </p>
           )}
@@ -218,7 +218,7 @@ export default function ConfirmCompletion() {
       {selectedAction && (
         <button
           onClick={handleSubmitReview}
-          className="w-full bg-black text-white py-3 rounded-xl text-sm font-medium mt-6"
+          className="w-full max-w-xs bg-black text-white py-3 rounded-xl text-sm font-medium mt-6"
         >
           {t.done}
         </button>
