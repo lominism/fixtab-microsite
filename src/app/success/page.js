@@ -25,10 +25,10 @@ export default function SuccessPage() {
 
   return (
     <div className="bg-white flex flex-col justify-center items-center px-4 py-16 text-center font-sans">
-      {/* Success Icon Placeholder */}
+      {/* Success Icon */}
       <div className="mb-6">
         <Image
-          src="/images/success.png" // Replace this with your real success icon later
+          src="/images/success.png"
           alt="Success Icon"
           width={120}
           height={120}

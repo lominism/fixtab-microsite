@@ -3,6 +3,7 @@
 import { useLanguage } from "../LanguageContext";
 import { useState } from "react";
 import Image from "next/image";
+import { CiStar } from "react-icons/ci";
 
 const labels = {
   en: {
@@ -69,10 +70,12 @@ export default function ConfirmCompletion() {
 
       {/* Requested By */}
       <div className="flex justify-between items-center text-xs mb-8 w-full max-w-xs mx-auto">
-        <span className="font-semibold text-xs">{t.requestedBy}</span>
-        <div className="text-right">
+        <span className="font-semibold text-gray-900 text-xs">
+          {t.requestedBy}
+        </span>
+        <div className="flex flex-col items-end text-right">
           <span className="text-gray-500">{contactName}</span>
-          <span className="ml-2 text-gray-400">{datetime}</span>
+          <span className="text-gray-400">{datetime}</span>
         </div>
       </div>
 
@@ -109,7 +112,9 @@ export default function ConfirmCompletion() {
             />
           </div>
 
-          <h2 className="font-semibold text-sm mb-1">{t.reviewTitle}</h2>
+          <h2 className="font-semibold text-gray-900 text-sm mb-1">
+            {t.reviewTitle}
+          </h2>
           <p className="text-xs text-gray-600 mb-3">
             {t.reviewPrompt}
             <br />
@@ -124,7 +129,7 @@ export default function ConfirmCompletion() {
                 onClick={() => setRating(star)}
                 className="text-2xl mx-0.5"
               >
-                {star <= rating ? "⭐" : "☆"}
+                {star <= rating ? "⭐" : <CiStar className="text-gray-900" />}
               </button>
             ))}
           </div>
@@ -165,7 +170,9 @@ export default function ConfirmCompletion() {
       {/* Conditional Issues Form when "No, There are issues" */}
       {selectedAction === "issue" && (
         <div className="w-full max-w-xs bg-gray-50 p-4 rounded-2xl">
-          <h2 className="font-semibold text-sm mb-1">{t.reviewTitle}</h2>
+          <h2 className="font-semibold text-gray-900 text-base mb-1">
+            {t.reviewTitle}
+          </h2>
           <p className="text-xs text-gray-600 mb-4">{t.rejectPrompt}</p>
 
           {/* Issue Reasons */}

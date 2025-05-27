@@ -196,7 +196,7 @@ export default function Home() {
         </form>
       </main>
       {/* Navigation Buttons */}
-      <div className="py-8">
+      <div className="py-8 max-w-sm mx-auto">
         <p className="text-sm text-center">
           Temporary nav buttons to see other pages I made
         </p>
@@ -212,6 +212,12 @@ export default function Home() {
             className="w-full text-center px-4 py-2 rounded-lg border border-gray-300 bg-gray-100 text-gray-700 hover:bg-gray-200 transition font-medium"
           >
             Complete Page
+          </Link>
+          <Link
+            href="/thankyou"
+            className="w-full text-center px-4 py-2 rounded-lg border border-gray-300 bg-gray-100 text-gray-700 hover:bg-gray-200 transition font-medium"
+          >
+            Thank You Page
           </Link>
         </div>
       </div>

@@ -5,6 +5,7 @@ import { useState } from "react";
 import Image from "next/image";
 import "./globals.css";
 import { LanguageContext } from "./LanguageContext";
+import Link from "next/link";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -28,13 +29,15 @@ export default function RootLayout({ children }) {
           <header className="bg-black px-4 py-3 flex items-center justify-between">
             <div className="flex items-center space-x-2">
               <div style={{ position: "relative", width: 120, height: 40 }}>
-                <Image
-                  src="/fixtab-logo-white.png"
-                  alt="Fixtab logo"
-                  fill
-                  style={{ objectFit: "contain" }}
-                  priority
-                />
+                <Link href="/">
+                  <Image
+                    src="/fixtab-logo-white.png"
+                    alt="Fixtab logo"
+                    fill
+                    style={{ objectFit: "contain" }}
+                    priority
+                  />
+                </Link>
               </div>
             </div>
             <button
