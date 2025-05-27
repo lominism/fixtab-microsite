@@ -163,7 +163,7 @@ export default function ConfirmCompletion() {
             value={comment}
             onChange={(e) => setComment(e.target.value)}
             rows={3}
-            className="w-full text-sm border rounded-lg p-2 mb-4 focus:outline-none focus:ring-1 focus:ring-gray-300"
+            className="w-full text-sm text-gray-900 border rounded-lg p-2 mb-4 focus:outline-none focus:ring-1 focus:ring-gray-300"
           />
         </div>
       )}
@@ -211,7 +211,7 @@ export default function ConfirmCompletion() {
             value={comment}
             onChange={(e) => setComment(e.target.value)}
             rows={3}
-            className="w-full text-sm border rounded-lg p-2 focus:outline-none focus:ring-1 focus:ring-gray-300"
+            className="w-full text-gray-900 text-sm border rounded-lg p-2 focus:outline-none focus:ring-1 focus:ring-gray-300"
           />
         </div>
       )}
